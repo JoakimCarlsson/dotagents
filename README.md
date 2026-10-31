@@ -1,6 +1,6 @@
 # dotagents
 
-My skills for coding agents: commit, write tickets, implement a ticket and open a pull request. Works with Claude Code, Codex, Copilot and others.
+My skills for coding agents: write tickets, implement a ticket, review the result, commit and open a pull request. Works with Claude Code, Codex, Copilot and others.
 
 ## Installation
 
@@ -63,6 +63,7 @@ Update with `npx skills@latest update`, and re-run `add` to pick up new skills.
 
 | Skill | What it does |
 | --- | --- |
+| `code-review` | Review a change against the ticket, the repo rules and for bugs, and report a verdict without editing code |
 | `commit` | Commit the session's changes on the current branch, without pushing |
 | `write-ticket` | Create and edit tickets and labels so an agent or a human can implement them |
 | `implement` | Create a branch for a ticket and implement it |

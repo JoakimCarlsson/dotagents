@@ -42,8 +42,9 @@ Report the branch name before moving on.
 8. Read the repo's `AGENTS.md` files (root and any nested ones covering the files you touch) and follow them.
 9. Explore the relevant code before editing. Match the surrounding style, naming and structure.
 10. Implement the ticket completely, every point it asks for. If part of it is blocked or ambiguous in a way that changes the outcome, do the rest and say explicitly what you left out and why.
-11. Verify. Run what `AGENTS.md` names for build, lint, type-check and tests, and then the ticket's "How to verify" steps if it has them. If you start a server, use a free port (set it through the port variable `AGENTS.md` names, such as `PORT`), even if the ticket's steps name a different one and stop it afterwards. Fix what you broke.
-12. Summarize: the branch, what changed and where, how it was verified, and anything left open.
+11. Verify. Run what `AGENTS.md` names for build, lint, type-check and tests, and then the ticket's "How to verify" steps if it has them. If you start a server, use a free port (set it through the port variable `AGENTS.md` names, such as `PORT`), even if the ticket's steps name a different one, and stop it afterwards. Fix what you broke.
+12. Review. Run the `code-review` skill on your uncommitted changes. Fix every blocker and should-fix finding in code you wrote, and remove any unrequested behaviour it reports, then verify again (step 11). Do not act on nits or on code the ticket did not touch: list them in the summary instead.
+13. Summarize: the branch, what changed and where, how it was verified, the review findings you fixed or left, and anything left open.
 
 ## Rules
 

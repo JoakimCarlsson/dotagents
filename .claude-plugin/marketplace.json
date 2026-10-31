@@ -8,7 +8,7 @@
     {
       "name": "dotagents",
       "source": "./",
-      "description": "Git, ticket and pull request skills: commit, write-ticket, implement and pr.",
+      "description": "Git, ticket and pull request skills: write-ticket, implement, code-review, commit and pr.",
       "category": "development",
       "keywords": [
         "git",

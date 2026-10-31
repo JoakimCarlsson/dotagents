@@ -1,7 +1,7 @@
 {
   "name": "dotagents",
   "version": "0.1.0",
-  "description": "Git, ticket and pull request skills for coding agents: commit, write-ticket, implement and pr.",
+  "description": "Git, ticket and pull request skills for coding agents: write-ticket, implement, code-review, commit and pr.",
   "author": {
     "name": "Joakim Carlsson"
   },
@@ -14,6 +14,7 @@
     "skills"
   ],
   "skills": [
+    "./skills/code-review",
     "./skills/commit",
     "./skills/implement",
     "./skills/pr",
