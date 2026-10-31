@@ -1,0 +1,20 @@
+{
+  "name": "dotagents",
+  "owner": {
+    "name": "Joakim Carlsson"
+  },
+  "description": "Joakim Carlsson's skills for coding agents, as an installable plugin.",
+  "plugins": [
+    {
+      "name": "dotagents",
+      "source": "./",
+      "description": "Git, ticket and pull request skills: commit, write-ticket, implement and pr.",
+      "category": "development",
+      "keywords": [
+        "git",
+        "tickets",
+        "pull-requests"
+      ]
+    }
+  ]
+}
