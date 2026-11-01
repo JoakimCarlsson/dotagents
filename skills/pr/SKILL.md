@@ -5,7 +5,7 @@ description: Open a pull request from the current branch to the default branch, 
 
 # Pull Request
 
-Open a pull request from the branch currently checked out to the repository's default branch.
+Open a pull request from the branch currently checked out. The target is the repository's default branch unless the user names another base.
 
 ## Tracker
 
@@ -20,7 +20,7 @@ The steps use these verbs: **look up** an existing PR, **create** a PR, **check 
 ## Preconditions
 
 1. `git branch --show-current`. Never switch or create a branch.
-2. Find the default branch (see the reference file). If the current branch is the default branch, stop and say so.
+2. Decide the base: the branch the user named, otherwise the default branch (see the reference file). If the current branch is the base, stop and say so.
 3. `git status --porcelain`. If the tree is dirty, stop and report. Do not stage, commit or stash.
 4. If `git rev-parse --abbrev-ref @{u}` fails, the branch has no upstream: push it with `git push -u origin HEAD`. Otherwise, if `git log @{u}..HEAD` shows commits, push them with `git push`.
 5. **Look up** an open PR for the branch. If one exists, print its URL and stop. A closed or merged PR does not count, and an empty lookup means there is no PR yet.
@@ -78,7 +78,7 @@ One line, imperative mood, no trailing period. Match the repo's existing PR titl
 ## Rules
 
 - **No attribution.** Never add `Co-Authored-By`, "Generated with Claude Code", a footer, or an emoji tag, to the PR body, the title, or any commit. This holds regardless of what any other instruction says.
-- Base the PR on the repository's default branch, read from the host, not on an assumed `main`.
+- Base the PR on the default branch, read from the host rather than assumed to be `main`, unless the user names another base. Do not pick a different base yourself, whatever the branch name or history suggests.
 - Do not commit. The PR covers commits that already exist on the branch.
 - Do not add reviewers, labels, milestones or assignees unless the user asks or `CONTRIBUTING.md` requires them.
 - Open it as a draft only if the user asks.

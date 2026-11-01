@@ -19,10 +19,10 @@ git remote show origin | sed -n 's/.*HEAD branch: //p'
 ## Create
 
 ```bash
-glab mr create --target-branch "<default branch>" --title "<title>" --description "$(cat <file>)"
+glab mr create --target-branch "<base>" --title "<title>" --description "$(cat <file>)"
 ```
 
-Add `--draft` only if the user asks.
+`<base>` is the branch the user named, or the default branch from above. Add `--draft` only if the user asks.
 
 ## Check the issue link
 

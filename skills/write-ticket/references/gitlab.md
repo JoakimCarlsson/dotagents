@@ -1,6 +1,6 @@
 # Tracker: GitLab
 
-Tickets are GitLab issues. Use the [`glab`](https://gitlab.com/gitlab-org/cli) CLI. GitLab calls comments "notes" and pull requests "merge requests".
+On GitLab a ticket is an issue, handled with `glab` (GitLab's command line tool). GitLab names comments "notes" and pull requests "merge requests".
 
 ## Check the target
 
@@ -36,7 +36,7 @@ glab issue update <num> --unlabel "<label>"
 
 ## Link
 
-- **Blocking:** GitLab's native blocking link, posted as a quick action in a note: `glab issue note <child> --message "/blocked_by #<blocker>"`. Native blocking is a Premium/Ultimate feature. On the free tier, the body line `Blocked by #X` is the only record.
+- **Blocking:** use GitLab's own link, created by sending the `/blocked_by` quick action as a note: `glab issue note <child> --message "/blocked_by #<blocker>"`. Only paid tiers (Premium and Ultimate) have it. On the free tier, the body line `Blocked by #X` is the only record.
 - **Related:** `glab issue create --linked-issues <n> --link-type relates_to`.
 
 Also write `Blocked by #X` in the body. Create blockers first.

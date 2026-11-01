@@ -28,7 +28,7 @@ An agent reads the ticket and nothing else, so write it to stand on its own. Giv
 The developer should be able to implement it, verify it locally, and *then* open a PR.
 
 - Never split work so the project is broken mid-series: no broken imports, missing routes, dangling references or unusable build.
-- Size each ticket as one vertical slice: a narrow but complete path through every layer it touches, verifiable on its own, and small enough for one fresh context window. If it needs more, split it.
+- Size each ticket as one vertical slice: a thin cut that goes end to end through every layer the work touches, checkable on its own, and small enough for one fresh context window. If it needs more, split it.
 - Acceptance criteria are binary (done or not done), never statements of intent.
 
 ### Explain why, not just what
@@ -37,7 +37,7 @@ A good ticket answers: why does this exist, what exactly changes, which decision
 
 ### Point, don't paste
 
-Name the module, symbol or existing pattern to follow (`createApp`, "the auth middleware"). Do not give line numbers or deep file paths, and do not paste code: they go stale. The exception is a snippet that fixes a decision more precisely than prose can, such as a schema, a state machine, a type shape, or an exact response body.
+Name the module, symbol or existing pattern to follow (`createApp`, "the auth middleware"). A plain file name like `server.test.js` is fine. Do not give line numbers or deep file paths, and do not paste code: they go stale. The one exception is a snippet that pins down a decision better than words can, such as a schema, a state machine, a type shape, or an exact response body.
 
 Repo-wide rules (build and test commands, conventions) belong in `AGENTS.md`. Do not repeat them in the ticket. Put only task-specific constraints in it.
 
@@ -129,6 +129,7 @@ After the pass, report every ticket by number and say which were created, update
 ### Create
 
 - **Never hard-wrap prose.** The tracker renders Markdown and reflows paragraphs to the full width. Write each paragraph as a single unbroken line. A hard newline is only meaningful where it belongs: between list items, between paragraphs, in code blocks, in tables.
+- Write body files under `~/.cache/scratch/<project>/` (`<project>` is the repository name) and delete them afterwards, cd'ing out of the directory first.
 - Pass labels only when you have chosen them per the rules above.
 - Attach screenshots or a recording only when the user asks. Save captures under `~/.cache/scratch/<project>/`, never `/tmp`, and delete them after the upload. How to attach is in the reference file.
 

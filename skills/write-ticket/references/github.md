@@ -1,6 +1,6 @@
 # Tracker: GitHub
 
-Tickets are GitHub issues. Use the **`gh`** CLI. Use `git` only for local repo operations. Do not use the web UI for bulk or scripted work unless the user asks.
+On GitHub a ticket is an issue, and all work goes through the **`gh`** command line tool. Keep `git` for local repository operations, and avoid the web UI for bulk or scripted jobs unless the user wants it.
 
 ## Contents
 
@@ -15,7 +15,7 @@ Tickets are GitHub issues. Use the **`gh`** CLI. Use `git` only for local repo o
 
 ## Check the target
 
-In a fork, `gh` can default to the upstream parent. Before the first `gh issue create` of a session, check the target with `gh repo view --json nameWithOwner`. Confirm with the user only if the repo is not the one named in the request or the current clone's `origin`, or if the clone is a fork (`gh repo view --json isFork`).
+`gh` run inside a fork may aim at the upstream repository. So before the session's first create, print the repo it will use with `gh repo view --json nameWithOwner`. Confirm with the user only if the repo is not the one named in the request or the current clone's `origin`, or if the clone is a fork (`gh repo view --json isFork`).
 
 ## Search
 
@@ -55,7 +55,7 @@ Hex colors are written without `#`.
 
 ## Link: blocking and sub-issues
 
-Native links need `gh` 2.94 or later (check `gh --version`).
+Native links need `gh` 2.94 or newer; `gh --version` tells you.
 
 ```bash
 gh issue create --blocked-by 12,13 ...          # at creation
@@ -64,7 +64,7 @@ gh issue create --parent <parent> ...           # sub-issue at creation
 gh issue edit <parent> --add-sub-issue <child>
 ```
 
-Create blockers first so the numbers exist. Also write `Blocked by #X` in the body. On an older `gh`, or where dependencies are unavailable, the body line is the only record. Use `Part of #<parent>` at the top of a child body where sub-issues are unavailable.
+Create blockers first so the numbers exist. Also write `Blocked by #X` in the body. On an older `gh`, or where dependencies are unavailable, the body line is the only record. Where sub-issues are unavailable, open a child's body with `Part of #<parent>`.
 
 ## Attach screenshots and recordings
 

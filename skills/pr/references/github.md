@@ -19,11 +19,11 @@ gh repo view --json defaultBranchRef -q .defaultBranchRef.name
 ## Create
 
 ```bash
-gh pr create --base "$(gh repo view --json defaultBranchRef -q .defaultBranchRef.name)" \
+gh pr create --base "<base>" \
   --title "<title>" --body-file <file> [--attach <file> ...]
 ```
 
-Add `--draft` only if the user asks.
+`<base>` is the branch the user named, or the default branch from above. Add `--draft` only if the user asks.
 
 ## Check the issue link
 

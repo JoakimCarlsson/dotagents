@@ -18,7 +18,7 @@ If the ref does not resolve or the diff is empty, stop and say so.
 
 ## 2. Gather context
 
-- **The ticket.** Use one the user named, else the number in the branch name (`task/<N>-…`) or a `Closes #N` in the commits. Fetch it with its comments: `gh issue view N --json title,body,comments` (add `--repo OWNER/REPO` if `origin` is not its repo), `glab issue view N --comments`, or the local file. No ticket, no spec file, and the user says there is none: skip check A and say so.
+- **The ticket.** Use one the user named, else the number in the branch name (`task/<N>-…`, or the repo's own pattern) or a `Closes #N` in the commits. Fetch it with its comments: `gh issue view N --json title,body,comments` (add `--repo OWNER/REPO` if `origin` is not its repo), `glab issue view N --comments`, or the local file. No ticket, no spec file, and the user says there is none: skip check A and say so.
 - **The rules.** Every document that tells contributors how to write code: `AGENTS.md` (root and nested ones covering the changed files), `CONTRIBUTING.md`, lint and formatter configs.
 - **The code.** Read each changed file whole, not only the changed lines, and open the callers of anything whose behaviour changed.
 

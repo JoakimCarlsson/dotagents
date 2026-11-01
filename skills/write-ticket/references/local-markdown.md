@@ -1,6 +1,6 @@
 # Tracker: local Markdown
 
-Use when there is no remote tracker. Each ticket is one Markdown file, never a single combined file.
+Use when there is no remote tracker. Give each ticket its own Markdown file instead of one shared list.
 
 ## Layout
 
@@ -26,6 +26,6 @@ Check for an existing tickets directory (`.tickets/`, `.scratch/`, `.tasks/`) an
 
 - **Edit:** edit the file in place. Reopen by setting `Status:` back to `open`.
 - **Label:** the `Labels:` line. There is no label registry, so skip label creation and keep to the names in [labels.md](labels.md).
-- **Link:** the `Blocked by:` line, using file numbers. A ticket is unblocked when every file it lists has `Status: done`.
+- **Link:** the `Blocked by:` line, using file numbers. A ticket can start once every file it names has `Status: done`.
 - **Attach:** save the file next to the ticket and link it with a relative path.
 - **Comments:** append under a `## Comments` heading at the bottom of the file.

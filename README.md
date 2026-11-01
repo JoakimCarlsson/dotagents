@@ -1,6 +1,6 @@
 # dotagents
 
-My skills for coding agents: write tickets, implement a ticket, review the result, commit and open a pull request. Works with Claude Code, Codex, Copilot and others.
+My skills for coding agents: tickets, implementing, reviewing, committing and pull requests, plus design interviews, architecture review, research and retros. Works with Claude Code, Codex, Copilot and others.
 
 ## Installation
 
@@ -68,6 +68,10 @@ Update with `npx skills@latest update`, and re-run `add` to pick up new skills.
 | `write-ticket` | Create and edit tickets and labels so an agent or a human can implement them |
 | `implement` | Create a branch for a ticket and implement it |
 | `pr` | Open a pull request to the default branch |
+| `plan-interview` | Interview you about a plan until it is settled, recording terms in `GLOSSARY.md` and decisions in `docs/adr/` |
+| `refactor-scan` | Find structural friction, propose ranked refactors toward deeper modules, then work through the one you pick |
+| `investigate` | Look something up in primary sources and write cited findings to a Markdown file |
+| `agent-retro` | Look back at a session and propose changes to the agent's environment |
 
 Invoke with `/skill-name` in Claude Code, or `$skill-name` in Codex. GitHub workflows use the authenticated `gh` CLI, and GitLab uses `glab`.
 

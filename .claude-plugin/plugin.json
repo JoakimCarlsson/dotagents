@@ -1,7 +1,7 @@
 {
   "name": "dotagents",
   "version": "0.1.0",
-  "description": "Git, ticket and pull request skills for coding agents: write-ticket, implement, code-review, commit and pr.",
+  "description": "Skills for coding agents: tickets, implement, review, commit and PR, plus design grilling, architecture review, research and retros.",
   "author": {
     "name": "Joakim Carlsson"
   },
@@ -14,10 +14,14 @@
     "skills"
   ],
   "skills": [
+    "./skills/agent-retro",
     "./skills/code-review",
     "./skills/commit",
     "./skills/implement",
+    "./skills/investigate",
+    "./skills/plan-interview",
     "./skills/pr",
+    "./skills/refactor-scan",
     "./skills/write-ticket"
   ]
 }
