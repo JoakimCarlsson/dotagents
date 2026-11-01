@@ -59,6 +59,17 @@ npx skills@latest add JoakimCarlsson/dotagents -a <agent>  # cursor, opencode, w
 
 Update with `npx skills@latest update`, and re-run `add` to pick up new skills.
 
+## Global instructions
+
+Plugins can't carry instructions, so `instructions/AGENTS.md` is installed separately. The script symlinks it to `~/.claude/CLAUDE.md` (Claude Code reads that name, not `AGENTS.md`), `~/.codex/AGENTS.md` and `~/.grok/AGENTS.md`, for each of those tools whose config folder exists. An existing file is backed up first.
+
+```sh
+git clone https://github.com/JoakimCarlsson/dotagents.git && dotagents/scripts/install.sh
+# or: curl -fsSL https://raw.githubusercontent.com/JoakimCarlsson/dotagents/main/scripts/install.sh | sh
+```
+
+Use `--agent claude|codex|grok` for one tool. `git pull` updates the linked file.
+
 ## Skills
 
 | Skill | What it does |
@@ -81,6 +92,9 @@ Invoke with `/skill-name` in Claude Code, or `$skill-name` in Codex. GitHub work
 | --- | --- |
 | `skills/` | One copy of every skill, shared by all agents |
 | `.claude-plugin/` | Plugin and marketplace manifests, read by Claude Code, Codex and Copilot |
+| `instructions/AGENTS.md` | My global instructions, shared by every agent |
+| `hooks/` | Claude Code session hook that injects the project's `AGENTS.md` (Claude Code reads only `CLAUDE.md`), shipped with the plugin |
+| `scripts/install.sh` | Symlinks the instructions into each agent's config folder |
 | `scripts/check-plugin.sh` | Checks `plugin.json` lists every skill in `skills/` |
 
 ## Versioning

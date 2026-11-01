@@ -1,7 +1,7 @@
 {
   "name": "dotagents",
   "version": "0.1.0",
-  "description": "Skills for coding agents: tickets, implement, review, commit and PR, plus design grilling, architecture review, research and retros.",
+  "description": "Skills for coding agents: tickets, implement, review, commit and PR, plus design grilling, architecture review, research and retros. Includes a Claude Code session hook that loads AGENTS.md.",
   "author": {
     "name": "Joakim Carlsson"
   },
