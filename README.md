@@ -81,6 +81,7 @@ Use `--agent claude|codex|grok` for one tool. `git pull` updates the linked file
 | `pr` | Open a pull request to the default branch |
 | `plan-interview` | Interview you about a plan until it is settled, recording terms in `GLOSSARY.md` and decisions in `docs/adr/` |
 | `refactor-scan` | Find structural friction, propose ranked refactors toward deeper modules, then work through the one you pick |
+| `resolve-merge-conflicts` | Finish a stopped merge, rebase or cherry-pick by working out what each side meant, keeping both, verifying and continuing |
 | `investigate` | Look something up in primary sources and write cited findings to a Markdown file |
 | `agent-retro` | Look back at a session and propose changes to the agent's environment |
 

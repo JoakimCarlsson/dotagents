@@ -8,7 +8,7 @@
     {
       "name": "dotagents",
       "source": "./",
-      "description": "Skills for coding agents: tickets, implement, review, commit and PR, plus design grilling, architecture review, research and retros.",
+      "description": "Skills for coding agents: tickets, implement, review, commit, PR and merge conflicts, plus design grilling, architecture review, research and retros.",
       "category": "development",
       "keywords": [
         "git",
